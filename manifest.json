@@ -1,0 +1,33 @@
+{
+  "name": "chrome-plugin",
+  "version": "1.0",
+  "description": "chrome-plugin description",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "./src/images/favicon.png",
+    "default_title": "chrome-plugin",
+    "default_popup": "./src/index.html"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "icons": {
+    "16": "./src/images/favicon.png",
+    "48": "./src/images/favicon.png",
+    "128": "./src/images/favicon.png"
+  },
+  "permissions": [
+    "bookmarks",
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "./src/index.html"
+  }
+}
